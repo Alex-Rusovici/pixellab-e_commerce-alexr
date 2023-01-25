@@ -8,7 +8,7 @@ export const Header = () => {
 
   return (
     <>
-      <section className="flex lg:flex-col justify-between items-center h-full lg:py-4 z-10  relative">
+      <section className="flex lg:flex-col justify-between items-center h-full lg:py-4 z-10 relative bg-neutral-900">
         <Link href="/">
           {/* no use for anchor */}
           {jsxVar}
