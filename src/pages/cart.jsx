@@ -1,3 +1,4 @@
+import {CartControls} from '@/components/cart';
 import {Layout} from '@/layouts';
 import Head from 'next/head';
 
@@ -10,7 +11,17 @@ const CartPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>Welcome</Layout>
+      <Layout>
+        <main className="container px-4 mx-auto">
+          <div>
+            {/* Add components/ui/common/ContinueShopping.jsx */}
+          </div>
+
+          <header className="flex justify-between">
+            <CartControls></CartControls>
+          </header>
+        </main>
+      </Layout>
     </>
   );
 };
