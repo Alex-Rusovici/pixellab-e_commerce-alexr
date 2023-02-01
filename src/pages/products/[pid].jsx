@@ -23,7 +23,7 @@ const ProductPage = () => {
 
       <Layout>
         <main>
-          <header className="flex justify-end container mx-auto px-4">
+          <header className="flex justify-end">
             <div className="border-l border-zinc-200">
               <CartControls></CartControls>
             </div>
