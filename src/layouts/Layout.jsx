@@ -28,7 +28,6 @@ export const Layout = ({ children }) => {
     color: ${white};
     grid-area: header;
     padding: 0 16px;
-    z-index: 9999;
 
     @media (min-width: 1024px) {
       position: fixed;

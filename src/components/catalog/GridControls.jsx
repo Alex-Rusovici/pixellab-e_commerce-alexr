@@ -1,11 +1,11 @@
-import {UiContext} from '@/pages/_app';
+import { UiContext } from '@/pages/_app';
 import { useContext } from 'react';
 
 const buttonClasses =
   'flex justify-center items-center border-l border-zinc-200 w-20 h-20 transition-colors hover:bg-neutral-900';
 
-export const GridControls = ({ set = () => {} }) => {
-  const {itemsPerRow, setItemsPerRow} = useContext(UiContext);
+export const GridControls = () => {
+  const { itemsPerRow, setItemsPerRow } = useContext(UiContext);
 
   return (
     <ul className="border border-l-0 border-zinc-200 hidden lg:flex">
@@ -18,7 +18,6 @@ export const GridControls = ({ set = () => {} }) => {
           }`}
           onClick={() => {
             setItemsPerRow('1/row');
-            set('1/row');
           }}
         >
           1
@@ -34,7 +33,6 @@ export const GridControls = ({ set = () => {} }) => {
           }`}
           onClick={() => {
             setItemsPerRow('2/row');
-            set('2/row');
           }}
         >
           2
@@ -50,7 +48,6 @@ export const GridControls = ({ set = () => {} }) => {
           }`}
           onClick={() => {
             setItemsPerRow('4/row');
-            set('4/row');
           }}
         >
           4

@@ -1,24 +1,24 @@
-import {CartControls} from '@/components/cart';
-import {Layout} from '@/layouts';
+import { CartControls } from '@/components/cart';
+import { Layout } from '@/layouts';
 import Head from 'next/head';
 
 const CartPage = () => {
   return (
     <>
       <Head>
-        <title>Cart - PixelLab E-commerce App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Cart - Pixellab Ecom App</title>
       </Head>
 
       <Layout>
         <main className="container px-4 mx-auto">
-          <div>
-            {/* Add components/ui/common/ContinueShopping.jsx */}
-          </div>
-
           <header className="flex justify-between">
-            <CartControls></CartControls>
+            <div>
+              {/* add components/ui|common/ContinueShopping.jsx sau Link */}
+            </div>
+
+            <div className="border-l border-zinc-200">
+              <CartControls></CartControls>
+            </div>
           </header>
         </main>
       </Layout>
