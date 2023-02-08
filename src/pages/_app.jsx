@@ -1,3 +1,4 @@
+import {CartContext} from '@/contexts/CartContext';
 import { createContext, useEffect, useState } from 'react';
 import {useLocalStorage} from 'usehooks-ts';
 import './../styles/index.css';
@@ -19,7 +20,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <UiContext.Provider value={{ itemsPerRow, setItemsPerRow: setPerRow, pagination, setPagination }}>
-      <Component {...pageProps} />;
+      <CartContext>
+        <Component {...pageProps} />;
+      </CartContext>
     </UiContext.Provider>
   );
 }

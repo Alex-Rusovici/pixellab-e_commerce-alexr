@@ -1,21 +1,37 @@
-export const CartDisplay = () => {
-  return <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-    </thead>
+import { cartContext } from '@/contexts';
+import { useContext } from 'react';
+import { CartLineItem } from '.';
 
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-      </tr>
-    </tbody>
-  </table>
-}
+export const CartDisplay = () => {
+  const { cartProducts, loading } = useContext(cartContext);
+
+  if (loading === true) {
+    return '...cart is loading';
+  }
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {cartProducts.map((cartProduct) => {
+          return (
+            <CartLineItem
+              cartProduct={cartProduct}
+              key={cartProduct.productId}
+            ></CartLineItem>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
